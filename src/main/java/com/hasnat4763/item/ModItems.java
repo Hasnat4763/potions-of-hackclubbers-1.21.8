@@ -19,7 +19,7 @@ import static com.hasnat4763.PotionsOfHackClubbers.MOD_ID;
 public class ModItems {
 
     public static Item CHICKEN_OVARY = registerItem("chicken_ovary", Item::new, new Item.Settings());
-
+    public static Item HEIDI_TAIL = registerItem("heidi_tail", Item::new, new Item.Settings());
 
 
 
@@ -32,11 +32,14 @@ public class ModItems {
         Registry.register(Registries.ITEM, itemKey, item);
         return item;
     }
-    public static void RegisterModItems(){
+    public static void RegisterModItems() {
         PotionsOfHackClubbers.LOGGER.info("Registering items for " + MOD_ID);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries->{
-            entries.add(CHICKEN_OVARY);
-        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
+                    entries.add(CHICKEN_OVARY);
+                    entries.add(HEIDI_TAIL);
+
+                }
+        );
 
     }
 }

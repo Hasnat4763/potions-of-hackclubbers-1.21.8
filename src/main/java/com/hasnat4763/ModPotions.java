@@ -3,7 +3,6 @@ package com.hasnat4763;
 import com.hasnat4763.item.ModItems;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.item.Items;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.Potions;
 import net.minecraft.registry.Registries;
@@ -37,19 +36,19 @@ public class ModPotions {
 
     public static void RegisterModPotions() {
         PotionsOfHackClubbers.LOGGER.info("Registering potions for " + MOD_ID);
-        FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
-            builder.registerPotionRecipe(
+        FabricBrewingRecipeRegistryBuilder.BUILD.register(builder ->
+                builder.registerPotionRecipe(
                         Potions.WATER,
-                        Items.POTATO,
+                        ModItems.HEIDI_TAIL,
                         Registries.POTION.getEntry(HEAVYSOB_POTION)
-                );});
+                ));
 
-        FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
+        FabricBrewingRecipeRegistryBuilder.BUILD.register(builder ->
             builder.registerPotionRecipe(
                     Potions.WATER,
                     ModItems.CHICKEN_OVARY,
                     Registries.POTION.getEntry(EGGER_POTION)
-            );});
+            ));
 
     }
 }

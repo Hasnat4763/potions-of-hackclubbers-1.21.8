@@ -16,8 +16,8 @@ import static com.hasnat4763.effect.ModEffects.HEAVYSOB;
 public class Heavysob extends StatusEffect {
     protected Heavysob() {
         super(StatusEffectCategory.HARMFUL, 0x98D9EA);
-        this.addAttributeModifier(EntityAttributes.ATTACK_DAMAGE, Identifier.ofVanilla("effect.weakness"), (double)-4.0F, EntityAttributeModifier.Operation.ADD_VALUE);
-        this.addAttributeModifier(EntityAttributes.ATTACK_SPEED, Identifier.ofVanilla("effect.mining_fatigue"), (double)-0.1F, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
+        this.addAttributeModifier(EntityAttributes.ATTACK_DAMAGE, Identifier.ofVanilla("effect.weakness"), -4.0F, EntityAttributeModifier.Operation.ADD_VALUE);
+        this.addAttributeModifier(EntityAttributes.ATTACK_SPEED, Identifier.ofVanilla("effect.mining_fatigue"), -0.1F, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
     }
     @Override
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
