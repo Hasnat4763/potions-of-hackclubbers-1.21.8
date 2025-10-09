@@ -18,9 +18,7 @@ import static com.hasnat4763.PotionsOfHackClubbers.MOD_ID;
 
 public class ModItems {
 
-    public static Item POTION_HEAVYSOB = registerItem("heavysob_potion", Item::new, new Item.Settings());
-    public static Item POTION_EGGER = registerItem("egger_potion", Item::new, new Item.Settings());
-    public static Item POTION_SADGE = registerItem("sadge_potion", Item::new, new Item.Settings());
+    public static Item CHICKEN_OVARY = registerItem("chicken_ovary", Item::new, new Item.Settings());
 
 
 
@@ -37,9 +35,7 @@ public class ModItems {
     public static void RegisterModItems(){
         PotionsOfHackClubbers.LOGGER.info("Registering items for " + MOD_ID);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries->{
-            entries.add(POTION_HEAVYSOB);
-            entries.add(POTION_EGGER);
-            entries.add(POTION_SADGE);
+            entries.add(CHICKEN_OVARY);
         });
 
     }

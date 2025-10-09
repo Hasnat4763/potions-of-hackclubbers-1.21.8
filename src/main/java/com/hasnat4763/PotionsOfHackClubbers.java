@@ -4,7 +4,8 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.hasnat4763.effect.Heavysob.RegisterModEffects;
+import static com.hasnat4763.ModPotions.RegisterModPotions;
+import static com.hasnat4763.effect.ModEffects.RegisterModEffects;
 import static com.hasnat4763.item.ModItems.RegisterModItems;
 
 public class PotionsOfHackClubbers implements ModInitializer {
@@ -24,5 +25,6 @@ public class PotionsOfHackClubbers implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 		RegisterModItems();
 		RegisterModEffects();
+		RegisterModPotions();
 	}
 }
