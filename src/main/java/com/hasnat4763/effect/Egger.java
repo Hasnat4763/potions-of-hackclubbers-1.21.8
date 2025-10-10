@@ -4,6 +4,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -15,11 +16,12 @@ import static com.hasnat4763.effect.ModEffects.EGGER;
 
 public class Egger extends StatusEffect {
     protected Egger() {
-        super(StatusEffectCategory.HARMFUL, 0xFFFF00);
+        super(StatusEffectCategory.NEUTRAL, 0xFFFF00);
     }
 
     @Override
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
+
         return true;
     }
 
@@ -27,6 +29,16 @@ public class Egger extends StatusEffect {
 
     public boolean applyUpdateEffect(ServerWorld world, LivingEntity entity, int amplifier) {
         if (entity instanceof PlayerEntity player) {
+            player.addStatusEffect(
+                    new StatusEffectInstance(
+                            StatusEffects.SLOW_FALLING,
+                            100,
+                            amplifier,
+                            false,
+                            false,
+                            false
+                    )
+            );
 
             int interval = 200 / (amplifier + 1);
 

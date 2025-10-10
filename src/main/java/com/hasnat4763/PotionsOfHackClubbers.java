@@ -5,8 +5,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static com.hasnat4763.ModPotions.RegisterModPotions;
+import static com.hasnat4763.ModVillagerTrades.RegisterModVillagerTrades;
 import static com.hasnat4763.effect.ModEffects.RegisterModEffects;
-import static com.hasnat4763.item.ModItems.RegisterModItems;
+import static com.hasnat4763.item.ModItems.*;
 
 public class PotionsOfHackClubbers implements ModInitializer {
 	public static final String MOD_ID = "pohc";
@@ -18,13 +19,12 @@ public class PotionsOfHackClubbers implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
-
 		LOGGER.info("Hello Fabric world!");
 		RegisterModItems();
 		RegisterModEffects();
 		RegisterModPotions();
+		RegisterModVillagerTrades();
+
+
 	}
 }

@@ -1,5 +1,20 @@
 {
   "item.pohc.chicken_ovary": "Chicken Ovary",
+  "item.pohc.heidi_tail": "Heidi's Tail",
   "effect.pohc.heavysob": "HeavySob",
-  "effect.pohc.egger": "Egger"
+  "item.minecraft.potion.effect.heavysob": "Potion of Heavysob",
+  "item.minecraft.splash_potion.effect.heavysob": "Splash Potion of Heavysob",
+  "effect.pohc.heavysob_ii": "Heavysob II",
+  "item.minecraft.potion.effect.heavysob_ii": "Potion of Heavysob II",
+  "item.minecraft.lingering_potion.effect.heavysob": "Lingering Potion of Heavysob",
+  "item.minecraft.splash_potion.effect.heavysob_ii": "Splash Potion of Heavysob II",
+  "item.minecraft.lingering_potion.effect.heavysob_ii": "Lingering Potion of Heavysob II",
+  "effect.pohc.egger": "Egger",
+  "item.minecraft.potion.effect.egger": "Potion of Egger",
+  "item.minecraft.splash_potion.effect.egger": "Splash Potion of Egger",
+  "item.minecraft.lingering_potion.effect.egger": "Lingering Potion of Egger",
+  "effect.pohc.egger_ii": "Egger II",
+  "item.minecraft.potion.effect.egger_ii": "Potion of Egger II",
+  "item.minecraft.splash_potion.effect.egger_ii": "Splash Potion of Egger II",
+  "item.minecraft.lingering_potion.effect.egger_ii": "Lingering Potion of Egger II"
 }
