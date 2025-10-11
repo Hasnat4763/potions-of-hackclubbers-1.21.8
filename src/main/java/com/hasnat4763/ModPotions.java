@@ -11,8 +11,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 import static com.hasnat4763.PotionsOfHackClubbers.MOD_ID;
-import static com.hasnat4763.effect.ModEffects.EGGER;
-import static com.hasnat4763.effect.ModEffects.HEAVYSOB;
+import static com.hasnat4763.effect.ModEffects.*;
 
 public class ModPotions {
     public static final Potion HEAVYSOB_POTION =
@@ -57,6 +56,17 @@ public class ModPotions {
                                     0)));
 
 
+    public static final Potion YAY_POTION =
+            Registry.register(
+                    Registries.POTION,
+                    Identifier.of(MOD_ID, "yay"),
+                    new Potion("yay",
+                            new StatusEffectInstance(
+                                    YAY,
+                                    3600,
+                                    0)));
+
+
     public static void RegisterModPotions() {
         PotionsOfHackClubbers.LOGGER.info("Registering potions for " + MOD_ID);
         FabricBrewingRecipeRegistryBuilder.BUILD.register(builder ->
@@ -69,7 +79,7 @@ public class ModPotions {
         FabricBrewingRecipeRegistryBuilder.BUILD.register(builder ->
                 builder.registerPotionRecipe(
                         Registries.POTION.getEntry(HEAVYSOB_POTION),
-                        Items.REDSTONE,
+                        Items.GLOWSTONE_DUST,
                         Registries.POTION.getEntry(HEAVYSOB_POTION_II)
                 ));
 
@@ -83,9 +93,17 @@ public class ModPotions {
         FabricBrewingRecipeRegistryBuilder.BUILD.register(builder ->
                 builder.registerPotionRecipe(
                         Registries.POTION.getEntry(EGGER_POTION),
-                        Items.REDSTONE,
+                        Items.GLOWSTONE_DUST,
                         Registries.POTION.getEntry(EGGER_POTION_II)
                 ));
+
+        FabricBrewingRecipeRegistryBuilder.BUILD.register(builder ->
+                builder.registerPotionRecipe(
+                        Potions.AWKWARD,
+                        ModItems.ORPHEUS_TAIL,
+                        Registries.POTION.getEntry(YAY_POTION)
+                ));
+
 
     }
 }

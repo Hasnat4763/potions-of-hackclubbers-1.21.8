@@ -1,0 +1,9 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:item/generated",
+	"texture_size": [182, 257],
+	"textures": {
+		"layer0": "pohc:item/heidi_tail"
+	}
+}

@@ -9,6 +9,7 @@ import net.minecraft.village.VillagerProfession;
 
 import static com.hasnat4763.PotionsOfHackClubbers.MOD_ID;
 import static com.hasnat4763.item.ModItems.HEIDI_TAIL;
+import static com.hasnat4763.item.ModItems.ORPHEUS_TAIL;
 
 public class ModVillagerTrades {
     public static void RegisterModVillagerTrades() {
@@ -16,13 +17,22 @@ public class ModVillagerTrades {
 
         TradeOfferHelper.registerVillagerOffers(VillagerProfession.CLERIC, 1, factories ->
                 factories.add((entity, random) -> new TradeOffer(
-                        new TradedItem(Items.EMERALD, 20),
-                        new ItemStack(HEIDI_TAIL, 1),
+                        new TradedItem(HEIDI_TAIL, 1),
+                        new ItemStack(Items.EMERALD, 20),
                         16, 2, 0.02f))
         );
 
-        TradeOfferHelper.registerWanderingTraderOffers(factories ->
-            factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_COMMON_ITEMS_POOL,
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.CLERIC, 1, factories ->
+                factories.add((entity, random) -> new TradeOffer(
+                        new TradedItem(ORPHEUS_TAIL, 1),
+                        new ItemStack(Items.EMERALD, 15),
+                        16, 2, 0.02f))
+        );
+
+
+
+        TradeOfferHelper.registerWanderingTraderOffers(factories -> {
+            factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL,
                     (entity, random) -> new TradeOffer(
                             new TradedItem(Items.EMERALD, 10),
                             new ItemStack(HEIDI_TAIL, 1),
@@ -30,7 +40,18 @@ public class ModVillagerTrades {
                             2,
                             0.02f
                     )
-            )
+            );
+
+            factories.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL,
+                        (entity, random) -> new TradeOffer(
+                                new TradedItem(Items.EMERALD, 10),
+                                new ItemStack(ORPHEUS_TAIL, 1),
+                                16,
+                                2,
+                                0.02f
+                        )
+            );
+        }
         );
     }
 }

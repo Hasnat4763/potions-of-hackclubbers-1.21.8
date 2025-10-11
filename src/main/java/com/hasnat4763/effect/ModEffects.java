@@ -14,8 +14,9 @@ public class ModEffects {
             Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(MOD_ID, "heavysob"), new Heavysob());
     public static final RegistryEntry<StatusEffect> EGGER =
             Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(MOD_ID, "egger"), new Egger());
+    public static final RegistryEntry<StatusEffect> YAY =
+            Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(MOD_ID, "yay"), new Yay());
     public static void RegisterModEffects(){
         PotionsOfHackClubbers.LOGGER.info("Registering effects for " + MOD_ID);
-
     }
 }

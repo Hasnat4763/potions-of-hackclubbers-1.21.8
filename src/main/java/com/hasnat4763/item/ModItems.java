@@ -20,7 +20,7 @@ public class ModItems {
 
     public static Item CHICKEN_OVARY = registerItem("chicken_ovary", Item::new, new Item.Settings());
     public static Item HEIDI_TAIL = registerItem("heidi_tail", Item::new, new Item.Settings());
-
+    public static Item ORPHEUS_TAIL = registerItem("orpheus_tail", Item::new, new Item.Settings());
 
 
 
@@ -37,6 +37,7 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
                     entries.add(CHICKEN_OVARY);
                     entries.add(HEIDI_TAIL);
+                    entries.add(ORPHEUS_TAIL);
 
                 }
         );
