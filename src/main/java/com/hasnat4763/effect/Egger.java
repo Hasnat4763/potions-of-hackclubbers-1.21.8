@@ -28,23 +28,9 @@ public class Egger extends StatusEffect {
 
     public boolean applyUpdateEffect(ServerWorld world, LivingEntity entity, int amplifier) {
         StatusEffectInstance EggerInstance = entity.getStatusEffect(EGGER);
-        assert EggerInstance != null;
-        if (entity instanceof PlayerEntity player) {
-            player.addStatusEffect(
-                    new StatusEffectInstance(
-                            StatusEffects.SLOW_FALLING,
-                            EggerInstance.getDuration(),
-                            amplifier,
-                            false,
-                            false,
-                            false
-                    )
-            );
 
+        if (entity instanceof PlayerEntity player && EggerInstance != null) {
             int interval = 200 / (amplifier + 1);
-
-
-
             if ((EggerInstance.getDuration()) > 0 && (EggerInstance.getDuration() % interval == 0)) {
                 player.dropItem(new ItemStack(Items.EGG), true, false);
                 world.playSound(

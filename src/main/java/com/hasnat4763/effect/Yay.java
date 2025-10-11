@@ -17,6 +17,7 @@ public class Yay extends StatusEffect {
         this.addAttributeModifier(EntityAttributes.ATTACK_DAMAGE, Identifier.ofVanilla("effect.strength"), 30.0F, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
         this.addAttributeModifier(EntityAttributes.MAX_ABSORPTION, Identifier.ofVanilla("effect.absorption"), 5.0F, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
         this.addAttributeModifier(EntityAttributes.MOVEMENT_SPEED, Identifier.ofVanilla("effect.speed"), 2.0F, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
+        this.addAttributeModifier(EntityAttributes.MAX_HEALTH, Identifier.ofVanilla("effect.speed"), 2.0F, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
     }
 
     @Override
