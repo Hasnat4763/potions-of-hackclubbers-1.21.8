@@ -33,54 +33,35 @@ public class PotionsOfHackClubbers implements ModInitializer {
 		RegisterModPotions();
 		RegisterModVillagerTrades();
 
-		LootTableEvents.MODIFY.register(((registryKey, builder, lootTableSource, wrapperLookup) -> {
-			if (CHICKEN_LOOT_DROP_ID.equals(registryKey.getValue())) {
-				if (lootTableSource.isBuiltin()) {
-					LootPool.Builder poolBuilder = LootPool.builder()
-							.rolls(ConstantLootNumberProvider.create(1))
-							.with(ItemEntry.builder(CHICKEN_OVARY)
-									.weight(5)
-									.quality(0));
-					builder.pool(poolBuilder);
-				}
-			}
-		}));
+        LootTableEvents.MODIFY.register(((registryKey, builder, lootTableSource, wrapperLookup) -> {
 
+            if (CHICKEN_LOOT_DROP_ID.equals(registryKey.getValue())) {
+                if (lootTableSource.isBuiltin()) {
+                    LootPool.Builder poolBuilder = LootPool.builder()
+                            .rolls(ConstantLootNumberProvider.create(1))
+                            .with(ItemEntry.builder(CHICKEN_OVARY)
+                                    .weight(1)
+                                    .quality(1));
+                    builder.pool(poolBuilder);
+                }
+            }
 
-
-		LootTableEvents.MODIFY.register((registryKey, builder, lootTableSource, wrapperLookup) -> {
-			if (CAT_GIFT_ID.equals(registryKey.getValue())) {
-				if (lootTableSource.isBuiltin()) {
-					LootPool.Builder poolBuilder = LootPool.builder()
-							.rolls(ConstantLootNumberProvider.create(1))
-							.with(ItemEntry.builder(ORPHEUS_TAIL)
-									.weight(30)
-									.quality(0));
-					builder.pool(poolBuilder);
-				}
-		}
-			if (CAT_GIFT_ID.equals(registryKey.getValue())) {
-				if (lootTableSource.isBuiltin()) {
-				LootPool.Builder poolBuilder = LootPool.builder()
-						.rolls(ConstantLootNumberProvider.create(1))
-						.with(ItemEntry.builder(HEIDI_TAIL)
-								.weight(30)
-								.quality(0));
-						builder.pool(poolBuilder);
-					}
-			}
-
-			if (CAT_GIFT_ID.equals(registryKey.getValue())) {
-				if (lootTableSource.isBuiltin()) {
-					LootPool.Builder poolBuilder = LootPool.builder()
-							.rolls(ConstantLootNumberProvider.create(1))
-							.with(ItemEntry.builder(CHICKEN_OVARY)
-									.weight(30)
-									.quality(0));
-					builder.pool(poolBuilder);
-				}
-			}
-		}
-		);
-		}
+            if (CAT_GIFT_ID.equals(registryKey.getValue())) {
+                if (lootTableSource.isBuiltin()) {
+                    LootPool.Builder catGiftPool = LootPool.builder()
+                            .rolls(ConstantLootNumberProvider.create(1))
+                            .with(ItemEntry.builder(ORPHEUS_TAIL)
+                                    .weight(3)
+                                    .quality(1))
+                            .with(ItemEntry.builder(HEIDI_TAIL)
+                                    .weight(2)
+                                    .quality(1))
+                            .with(ItemEntry.builder(CHICKEN_OVARY)
+                                    .weight(1)
+                                    .quality(1));
+                    builder.pool(catGiftPool);
+                }
+            }
+        }));
+    }
 }
