@@ -17,5 +17,19 @@
   "effect.pohc.egger_ii": "Egger II",
   "item.minecraft.potion.effect.egger_ii": "Potion of Egger II",
   "item.minecraft.splash_potion.effect.egger_ii": "Splash Potion of Egger II",
-  "item.minecraft.lingering_potion.effect.egger_ii": "Lingering Potion of Egger II"
+  "item.minecraft.lingering_potion.effect.egger_ii": "Lingering Potion of Egger II",
+  "effect.pohc.yay": "Yay",
+  "item.minecraft.potion.effect.yay": "Potion of Yay",
+  "item.minecraft.splash_potion.effect.yay": "Splash Potion of Yay",
+  "item.minecraft.lingering_potion.effect.yay": "Lingering Potion of Yay",
+  "effect.pohc.yay_ii": "Yay II",
+  "item.minecraft.potion.effect.yay_ii": "Potion of Yay II",
+  "item.minecraft.splash_potion.effect.yay_ii": "Splash Potion of Yay II",
+  "item.minecraft.lingering_potion.effect.yay_ii": "Lingering Potion of Yay II",
+  "item.minecraft.tipped_arrow.effect.heavysob": "Tipped Arrow of Heavysob",
+  "item.minecraft.tipped_arrow.effect.heavysob_ii": "Tipped Arrow of Heavysob II",
+  "item.minecraft.tipped_arrow.effect.egger": "Tipped Arrow of Egger",
+  "item.minecraft.tipped_arrow.effect.egger_ii": "Tipped Arrow of Egger II",
+  "item.minecraft.tipped_arrow.effect.yay": "Tipped Arrow of Yay",
+  "item.minecraft.tipped_arrow.effect.yay_ii": "Tipped Arrow of Yay II"
 }

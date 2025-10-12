@@ -53,7 +53,7 @@ public class ModPotions {
                             new StatusEffectInstance(
                                     EGGER,
                                     3600,
-                                    0)));
+                                    1)));
 
 
     public static final Potion YAY_POTION =
@@ -65,6 +65,15 @@ public class ModPotions {
                                     YAY,
                                     3600,
                                     0)));
+    public static final Potion YAY_POTION_II =
+            Registry.register(
+                    Registries.POTION,
+                    Identifier.of(MOD_ID, "yay_ii"),
+                    new Potion("yay_ii",
+                            new StatusEffectInstance(
+                                    YAY,
+                                    3600,
+                                    1)));
 
 
     public static void RegisterModPotions() {
@@ -103,7 +112,12 @@ public class ModPotions {
                         ModItems.ORPHEUS_TAIL,
                         Registries.POTION.getEntry(YAY_POTION)
                 ));
-
+        FabricBrewingRecipeRegistryBuilder.BUILD.register(builder ->
+                builder.registerPotionRecipe(
+                        Registries.POTION.getEntry(YAY_POTION),
+                        Items.GLOWSTONE_DUST,
+                        Registries.POTION.getEntry(YAY_POTION_II)
+                ));
 
     }
 }

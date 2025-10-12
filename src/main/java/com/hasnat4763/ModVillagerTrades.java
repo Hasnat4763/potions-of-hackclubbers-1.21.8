@@ -15,14 +15,14 @@ public class ModVillagerTrades {
     public static void RegisterModVillagerTrades() {
         PotionsOfHackClubbers.LOGGER.info("Registering villager trades for " + MOD_ID);
 
-        TradeOfferHelper.registerVillagerOffers(VillagerProfession.CLERIC, 1, factories ->
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.CLERIC, 5, factories ->
                 factories.add((entity, random) -> new TradeOffer(
                         new TradedItem(HEIDI_TAIL, 1),
                         new ItemStack(Items.EMERALD, 20),
                         16, 2, 0.02f))
         );
 
-        TradeOfferHelper.registerVillagerOffers(VillagerProfession.CLERIC, 1, factories ->
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.CLERIC, 5, factories ->
                 factories.add((entity, random) -> new TradeOffer(
                         new TradedItem(ORPHEUS_TAIL, 1),
                         new ItemStack(Items.EMERALD, 15),
